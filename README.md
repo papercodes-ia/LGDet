@@ -12,6 +12,8 @@ To train the model in the paper, run this command:
 python tools/train.py configs/kitti/fcos_center-normbbox-centeronreg-giou_r50_caffe_fpn_gn-head_dcn_1x-LGDet.py
 ```
 
+We use ResNet-50 pretrained on Imagenet to train our models, which can be downloaded by default when running the training command. For a better performance, we can also pretrain distance transforms with pretrain_mask set to True.
+
 ## Evaluation
 
 To evaluate the model on KITTI val, run:
@@ -20,25 +22,14 @@ To evaluate the model on KITTI val, run:
 python tools/test.py configs/kitti/fcos_center-normbbox-centeronreg-giou_r50_caffe_fpn_gn-head_dcn_1x-LGDet.py work_dirs/kitti/<path_to_trained_model> --eval bbox
 ```
 
-## Pre-trained Models
-
-We use ResNet-50 pretrained on Imagenet to train our models, which can be downloaded by default when running the training command. For a better performance, we can also pretrain distance transforms with pretrain_mask set to True. You can download pretrained models here:
-
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
-
 ## Results
 
-Our model achieves the following performance on :
+Our model achieves the following performance on KITTI val:
 
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
-
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
-
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+| Model name      | AP70 | AP75 | AP80 | AP85 | AP90 | AP95 | APs70 | APm70 | APl70 | Easy | Moderate | Hard |
+|:---------------:|:----:|:----:|:----:|:----:|:----:|:----:|:-----:|:-----:|:-----:|:----:|:--------:|:----:|
+| FCOS (baseline) | 92.0 | 88.4 | 81.1 | 66.0 | 37.7 | 4.3  | 84.0  | 92.3  | 95.5  | 91.42| 86.59    | 85.89|
+| LGDet (ours)    | 94.6 | 92.1 | 86.8 | 74.4 | 45.6 | 7.6  | 90.2  | 94.6  | 96.4  | 91.29| 87.61    | 88.03|
 
 
 ## License

@@ -1,36 +1,28 @@
 # Learning More from Labels: Regularizing Deep Networks with Label Geometry for Accurate Object Localization
 
+## Installation
 
-## Requirements
-
-Our code is based on [mmdetection](https://github.com/open-mmlab/mmdetection). Please follow and install mmdetection first, and then put our codes as well as [data](http://www.cvlibs.net/datasets/kitti/) in corresponding folders.
-
-
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
+Our code is based on [mmdetection](https://github.com/open-mmlab/mmdetection). Please install mmdetection first, and then put our code and [KITTI images](http://www.cvlibs.net/datasets/kitti/) in corresponding folders.
 
 ## Training
 
-To train the model(s) in the paper, run this command:
+To train the model in the paper, run this command:
 
 ```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+python tools/train.py configs/kitti/fcos_center-normbbox-centeronreg-giou_r50_caffe_fpn_gn-head_dcn_1x-LGDet.py
 ```
-
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
 
 ## Evaluation
 
-To evaluate my model on ImageNet, run:
+To evaluate the model on KITTI val, run:
 
 ```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
+python tools/test.py configs/kitti/fcos_center-normbbox-centeronreg-giou_r50_caffe_fpn_gn-head_dcn_1x-LGDet.py work_dirs/kitti/<path_to_trained_model> --eval bbox
 ```
-
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
 
 ## Pre-trained Models
 
-You can download pretrained models here:
+We use ResNet-50 pretrained on Imagenet to train our models, which can be downloaded by default when running the training command. For a better performance, we can also pretrain distance transforms with pretrain_mask set to True. You can download pretrained models here:
 
 - [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
 
@@ -49,6 +41,6 @@ Our model achieves the following performance on :
 >📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
 
 
-## Contributing
+## License
 
->📋  Pick a licence and describe how to contribute to your code repository. 
+This project is released under the MIT license.

@@ -2,7 +2,7 @@
 
 ## Installation
 
-Our code is based on [mmdetection](https://github.com/open-mmlab/mmdetection). Please install mmdetection first, and then put our code and [KITTI images](http://www.cvlibs.net/datasets/kitti/) in corresponding folders.
+Our code is based on [mmdetection](https://github.com/open-mmlab/mmdetection). Please install mmdetection first, and then put our code and [KITTI images](http://www.cvlibs.net/datasets/kitti/) (CC BY-NC-SA 3.0) in corresponding folders.
 
 ## Training
 

@@ -1,6 +1,6 @@
 # Learning More from Labels: Regularizing Deep Networks with Label Geometry for Accurate Object Localization
 
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
+![-](https://github.com/papercodes-ia/LGDet/blob/main/image/overall.png)
 
 ## Requirements
 

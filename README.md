@@ -1,18 +1,11 @@
->📋  A template README.md for code accompanying a Machine Learning paper
-
-# My Paper Title
-
-This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
+# Learning More from Labels: Regularizing Deep Networks with Label Geometry for Accurate Object Localization
 
 >📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
 
 ## Requirements
 
-To install requirements:
+Our code is based on [mmdetection](https://github.com/open-mmlab/mmdetection). Please follow and install mmdetection first, and then put our codes as well as [data](http://www.cvlibs.net/datasets/kitti/) in corresponding folders.
 
-```setup
-pip install -r requirements.txt
-```
 
 >📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
 

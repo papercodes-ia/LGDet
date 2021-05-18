@@ -9,7 +9,7 @@ Our code is based on [mmdetection](https://github.com/open-mmlab/mmdetection). P
 To train the model in the paper, run this command:
 
 ```train
-python tools/train.py configs/kitti/fcos_center-normbbox-centeronreg-giou_r50_caffe_fpn_gn-head_dcn_1x-LGDet.py
+python tools/train.py configs/kitti/fcos_center-normbbox-centeronreg-giou_r50_caffe_fpn_gn-head_1x-LGDet.py
 ```
 
 We use ResNet-50 pretrained on Imagenet to train our models, which can be downloaded by default when running the training command. For a better performance, we can also pretrain distance transforms with pretrain_mask set to True.
@@ -19,7 +19,7 @@ We use ResNet-50 pretrained on Imagenet to train our models, which can be downlo
 To evaluate the model on KITTI val, run:
 
 ```eval
-python tools/test.py configs/kitti/fcos_center-normbbox-centeronreg-giou_r50_caffe_fpn_gn-head_dcn_1x-LGDet.py work_dirs/kitti/<path_to_trained_model> --eval bbox
+python tools/test.py configs/kitti/fcos_center-normbbox-centeronreg-giou_r50_caffe_fpn_gn-head_1x-LGDet.py work_dirs/kitti/<path_to_trained_model> --eval bbox
 ```
 
 ## Results

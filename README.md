@@ -2,14 +2,14 @@
 
 ## Installation
 
-Our code is based on [mmdetection](https://github.com/open-mmlab/mmdetection). Please install mmdetection first, and then put our code and [KITTI images](http://www.cvlibs.net/datasets/kitti/) (CC BY-NC-SA 3.0) in corresponding folders.
+Our code is based on [mmdetection v2.10.0](https://github.com/open-mmlab/mmdetection/tree/v2.10.0). Please install mmdetection first, and then put our code and [KITTI images](http://www.cvlibs.net/datasets/kitti/) (CC BY-NC-SA 3.0) in corresponding folders.
 
 ## Training
 
 To train the model in the paper, run this command:
 
 ```train
-python tools/train.py configs/kitti/fcos_center-normbbox-centeronreg-giou_r50_caffe_fpn_gn-head_1x-LGDet.py
+python tools/train.py configs/kitti/LGDet-fcos.py
 ```
 
 We use ResNet-50 pretrained on Imagenet to train our models, which can be downloaded by default when running the training command. For a better performance, we can also pretrain distance transforms with pretrain_mask set to True.
@@ -19,7 +19,7 @@ We use ResNet-50 pretrained on Imagenet to train our models, which can be downlo
 To evaluate the model on KITTI val, run:
 
 ```eval
-python tools/test.py configs/kitti/fcos_center-normbbox-centeronreg-giou_r50_caffe_fpn_gn-head_1x-LGDet.py work_dirs/kitti/<path_to_trained_model> --eval bbox
+python tools/test.py configs/kitti/LGDet-fcos.py work_dirs/kitti/LGDet_FCOS/latest.pth --eval bbox
 ```
 
 ## Results

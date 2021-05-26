@@ -13,6 +13,7 @@ model = dict(
         dcn_on_last_conv=True,
         center_sampling=True,
         conv_bias=True,
+        pretrain_mask=False,
         delta_t=0.5,
         max_steps=2,
         loss_bbox=dict(type='GIoULoss', loss_weight=1.0)),

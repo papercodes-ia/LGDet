@@ -29,6 +29,7 @@ from .yolact_head import YOLACTHead, YOLACTProtonet, YOLACTSegmHead
 from .yolo_head import YOLOV3Head
 
 from .fcos_head_LGDet import FCOSHeadLGDet
+from .fovea_head_LGDet import FoveaHeadLGDet
 
 
 
@@ -41,5 +42,5 @@ __all__ = [
     'YOLACTSegmHead', 'YOLACTProtonet', 'YOLOV3Head', 'PAAHead',
     'SABLRetinaHead', 'CentripetalHead', 'VFNetHead', 'TransformerHead',
     'StageCascadeRPNHead', 'CascadeRPNHead', 'EmbeddingRPNHead',
-    'FCOSHeadLGDet'
+    'FCOSHeadLGDet', 'FoveaHeadLGDet'
 ]

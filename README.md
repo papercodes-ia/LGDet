@@ -9,7 +9,7 @@ Our code is based on [mmdetection v2.10.0](https://github.com/open-mmlab/mmdetec
 To train the model in the paper, run this command:
 
 ```train
-python tools/train.py configs/kitti/LGDet-fcos.py
+python tools/train.py configs/kitti/LGDet_FCOS.py
 ```
 
 We use ResNet-50 pretrained on Imagenet to train our models, which can be downloaded by default when running the training command. For a better performance, we can also pretrain distance transforms with pretrain_mask set to True.
@@ -19,7 +19,7 @@ We use ResNet-50 pretrained on Imagenet to train our models, which can be downlo
 To evaluate the model on KITTI val, run:
 
 ```eval
-python tools/test.py configs/kitti/LGDet-fcos.py work_dirs/kitti/LGDet_FCOS/latest.pth --eval bbox
+python tools/test.py configs/kitti/LGDet_FCOS.py work_dirs/kitti/LGDet_FCOS/latest.pth --eval bbox
 ```
 
 ## Results
